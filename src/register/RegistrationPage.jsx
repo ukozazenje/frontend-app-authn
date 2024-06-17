@@ -287,13 +287,13 @@ const RegistrationPage = (props) => {
           }
         />
         {autoSubmitRegForm && !errorCode.type ? (
-          <div className="mw-xs mt-5 text-center">
+          <div className="mt-5 text-center">
             <Spinner animation="border" variant="primary" id="tpa-spinner" />
           </div>
         ) : (
           <div
             className={classNames(
-              'mw-xs mt-3',
+              'mt-3',
               { 'w-100 m-auto pt-4 main-content': registrationEmbedded },
             )}
           >
@@ -307,7 +307,7 @@ const RegistrationPage = (props) => {
               failureCount={errorCode.count}
               context={{ provider: currentProvider, errorMessage: thirdPartyAuthErrorMessage }}
             />
-            <Form id="registration-form" name="registration-form">
+            <Form id="registration-form" name="registration-form" className="custom-form-wrapper">
               <NameField
                 name="name"
                 value={formFields.name}
@@ -362,7 +362,7 @@ const RegistrationPage = (props) => {
                 name="register-user"
                 type="submit"
                 variant="brand"
-                className="register-button mt-4 mb-4"
+                className="register-button"
                 state={submitState}
                 labels={{
                   default: buttonLabel,

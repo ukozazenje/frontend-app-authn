@@ -243,7 +243,7 @@ class LoginPage extends React.Component {
           redirectUrl={this.props.loginResult.redirectUrl}
           finishAuthUrl={thirdPartyAuthContext.finishAuthUrl}
         />
-        <div className="mw-xs mt-3">
+        <div className="mt-3">
           <ThirdPartyAuthAlert
             currentProvider={thirdPartyAuthContext.currentProvider}
             platformName={thirdPartyAuthContext.platformName}
@@ -253,7 +253,7 @@ class LoginPage extends React.Component {
           {submitState === DEFAULT_STATE && this.state.isSubmitted ? windowScrollTo({ left: 0, top: 0, behavior: 'smooth' }) : null}
           {activationMsgType && <AccountActivationMessage messageType={activationMsgType} />}
           {this.props.resetPassword && !this.props.loginError ? <ResetPasswordSuccess /> : null}
-          <Form name="sign-in-form" id="sign-in-form">
+          <Form name="sign-in-form" id="sign-in-form" className="custom-form-wrapper">
             <FormGroup
               name="emailOrUsername"
               value={this.state.emailOrUsername}
@@ -292,7 +292,7 @@ class LoginPage extends React.Component {
             <Link
               id="forgot-password"
               name="forgot-password"
-              className="btn btn-link font-weight-500 text-body"
+              className="font-weight-400 password-link"
               to={updatePathWithQueryParams(RESET_PAGE)}
               onClick={this.handleForgotPasswordLinkClickEvent}
             >

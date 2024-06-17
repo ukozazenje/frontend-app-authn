@@ -14,11 +14,16 @@
 }
 
 .content {
+  width: 100%;
+  padding: 16px;
+  @include media-breakpoint-up('md') {
+    max-width: 560px;
+  }
   @include media-breakpoint-up('xl') {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50vw;
-    margin-top: 4rem;
   }
 }
 
@@ -29,7 +34,7 @@
 }
 
 .logo {
-  width: 71px;
+  width: 50px;
   margin-top: 2rem;
   margin-left: 1.5rem;
 }
